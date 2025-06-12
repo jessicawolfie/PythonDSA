@@ -1,0 +1,6 @@
+caneta
+lapis
+borracha
+caderno
+livro
+regua

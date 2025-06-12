@@ -1,0 +1,38 @@
+INÍCIO
+
+// Inicialização
+Definir lista_palavras ← ["banana", "computador", "programacao", "python", "chatgpt"]
+Selecionar aleatoriamente palavra_secreta da lista_palavras
+Definir letras_corretas ← lista com "_" com tamanho da palavra_secreta
+Definir letras_erradas ← lista vazia
+Definir tentativas_restantes ← 6
+
+// Loop principal do jogo
+ENQUANTO tentativas_restantes > 0 E letras_corretas contém "_"
+    Mostrar letras_corretas como string (ex: "_ _ _ a _ a")
+    Mostrar letras_erradas
+    Mostrar tentativas_restantes
+    
+    Solicitar letra_usuario ← entrada do jogador
+    
+    SE letra_usuario está na palavra_secreta E letra_usuario não está em letras_corretas
+        PARA cada índice i da palavra_secreta
+            SE palavra_secreta[i] = letra_usuario
+                letras_corretas[i] ← letra_usuario
+        FIM PARA
+    SENÃO
+        SE letra_usuario não está em letras_erradas
+            Adicionar letra_usuario a letras_erradas
+            Decrementar tentativas_restantes
+        FIM SE
+    FIM SE
+FIM ENQUANTO
+
+// Resultado final
+SE letras_corretas não contém "_"
+    Mostrar "Parabéns! Você venceu!"
+SENÃO
+    Mostrar "Você perdeu. A palavra era: " + palavra_secreta
+FIM SE
+
+FIM
