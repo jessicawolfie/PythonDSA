@@ -1,4 +1,5 @@
 # Desenvolvimento de game em Python - Projeto do curso DSA
+# Haangman
 
 import random
 from os import system, name
@@ -28,7 +29,7 @@ def game():
 
     palavra = random.choice(palavras)
     letras_descobertas = ['_' for _ in palavra]
-    chances = 8
+    chances = 6
     letras_erradas = []
 
     while chances > 0:
